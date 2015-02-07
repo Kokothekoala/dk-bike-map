@@ -66,8 +66,13 @@
 }
 #street{
   line-width:1;
-  line-color:#666;
-}
+  line-color:#666
+ }
+
+#railway{
+  line-width:2;
+   line-color: #000;
+  }
 
 #motorway{
   text-name:[ref];
