@@ -12,15 +12,15 @@
 }
 
 #trunk::border{
-  line-width:9;
+  line-width:5;
   line-color:#000;
 }
 #trunk::fill{
-  line-width:8;
+  line-width:4;
   line-color:#F00;
 }
 #trunk::fill2{
-  line-width:3;
+  line-width:1;
   line-color:#FFF;
 }
 
