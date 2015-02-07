@@ -25,29 +25,29 @@
 }
 
 #primary::border{
-  line-width:6;
+  line-width:4;
   line-color:#000;
 }
 #primary::fill{
-  line-width:5;
+  line-width:3;
   line-color:#F00;
 }
 
 #secondary::border{
-  line-width:6;
+  line-width:4;
   line-color:#000;
 }
 #secondary::fill{
-  line-width:5;
+  line-width:3;
   line-color:#FF0;
 }
 
 #tertiary::border{
-  line-width:4;
+  line-width:3;
   line-color:#000;
 }
 #tertiary::fill{
-  line-width:3;
+  line-width:2;
   line-color:#FF0;
 }
 
