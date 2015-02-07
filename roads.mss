@@ -64,3 +64,58 @@
   line-width:1;
   line-color:#666;
 }
+#street{
+  line-width:1;
+  line-color:#666;
+}
+
+#motorway{
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 12;
+  text-ratio:10;
+  text-fill: #FF0;
+  text-halo-fill: #000;
+  text-halo-radius:1;
+  text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
+  }
+#primary{
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 12;
+  text-ratio:10;
+  text-fill: #F00;
+  text-halo-fill: #000;
+  text-halo-radius:1;
+    text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
+  }
+
+#secondary{
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 12;
+  text-ratio:10;
+  text-fill: #FF0;
+  text-halo-fill: #000;
+  text-halo-radius:1;
+    text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
+  }
+
+#tertiary{
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 10;
+  text-ratio:10;
+  text-fill: #FF0;
+  text-halo-fill: #000;
+  text-halo-radius:1;
+    text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
+  }

@@ -13,14 +13,58 @@
   "format": "png8",
   "interactivity": false,
   "minzoom": 9,
-  "maxzoom": 11,
+  "maxzoom": 14,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "roads.mss",
     "style.mss",
-    "cities.mss"
+    "cities.mss",
+    "buildings.mss"
   ],
   "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9576309889999,
+        -76.12184010199991,
+        179.50464928500003,
+        81.34483470300006
+      ],
+      "id": "coastline",
+      "class": "",
+      "Datasource": {
+        "file": "/home/tristan/dev/Dev_perso/OSM/ne_10m_minor_islands.zip",
+        "id": "coastline",
+        "project": "Bike",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "coastline",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999999999,
+        -85.051,
+        180,
+        83.63410065300013
+      ],
+      "id": "land",
+      "class": "",
+      "Datasource": {
+        "file": "/home/tristan/dev/Dev_perso/OSM/ne_10m_land.zip"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "land",
+      "status": "off"
+    },
     {
       "id": "countries",
       "name": "countries",
@@ -30,6 +74,58 @@
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
         "type": "shape"
       }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        7.793828769942817,
+        54.12650818696786,
+        15.553064047114887,
+        57.75202940924406
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": " (select * from planet_osm_polygon where building like '%') as buildings",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "867605.05,7194151.93,1731359.17,7915406.06",
+        "host": "localhost",
+        "user": "postgres",
+        "dbname": "gis"
+      },
+      "id": "building",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "building"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -20.07143281089289,
+        52.69143297497835,
+        28.10971392072769,
+        62.007902384434516
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where highway like 'residential' or highway like 'living_street' or highway like 'service' or highway like 'pedestrian') as street",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-2234341.68,6926124.09,3129159.04,8861016.83",
+        "dbname": "gis",
+        "user": "postgres",
+        "host": "localhost"
+      },
+      "id": "street",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "street"
     },
     {
       "geometry": "linestring",
