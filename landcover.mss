@@ -98,7 +98,7 @@
     [zoom >= 10] {
       polygon-fill: @vineyard;
     }
-    [zoom >= 13] {
+    [zoom >= 12] {
       polygon-pattern-file: url('symbols/vineyard.png');
     }
   }
@@ -214,7 +214,7 @@
     [zoom >= 8] {
       polygon-fill: @forest;
     }
-    [zoom >= 14] {
+    [zoom >= 12] {
       polygon-pattern-file: url('symbols/forest.png');
     }
 
