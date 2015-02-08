@@ -26,29 +26,6 @@
     {
       "geometry": "polygon",
       "extent": [
-        -179.9576309889999,
-        -76.12184010199991,
-        179.50464928500003,
-        81.34483470300006
-      ],
-      "id": "coastline",
-      "class": "",
-      "Datasource": {
-        "file": "/home/tristan/dev/Dev_perso/OSM/ne_10m_minor_islands.zip",
-        "id": "coastline",
-        "project": "Bike",
-        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "coastline",
-      "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
         -180,
         -85.051,
         180,
@@ -64,16 +41,6 @@
       "srs": "",
       "advanced": {},
       "name": "land"
-    },
-    {
-      "id": "countries",
-      "name": "countries",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "geometry": "polygon",
-      "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
-        "type": "shape"
-      }
     },
     {
       "geometry": "polygon",

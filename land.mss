@@ -7,7 +7,7 @@
   polygon-fill: #fff;
 }
 
-#river{
+#river::fill{
   line-width: 2;
   line-color:#85c5d3;
   }

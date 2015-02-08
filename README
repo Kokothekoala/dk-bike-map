@@ -10,3 +10,7 @@ Pour utiliser ce projet :
 Récupérer à l'adresse suivante :
 http://openstreetmapdata.com/data/land-polygons
 la version "large polygons are split" (2e dans la liste)
+Décompresser et modifier les chemins correspondants dans le fichier
+project.mll
+"file": "/home/tristan/dev/Dev_perso/OSM/land-polygons-split-4326.zip"
+
