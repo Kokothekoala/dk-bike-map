@@ -12,7 +12,7 @@
   ],
   "format": "png8",
   "interactivity": false,
-  "minzoom": 9,
+  "minzoom": 6,
   "maxzoom": 14,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
@@ -21,7 +21,8 @@
     "cities.mss",
     "buildings.mss",
     "land.mss",
-    "bikes.mss"
+    "bikes.mss",
+    "landcover.mss"
   ],
   "Layer": [
     {
@@ -39,7 +40,9 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "867605.05,7194151.93,1731359.17,7915406.06",
-        "dbname": "gis"
+        "dbname": "gis",
+        "user": "postgres",
+        "host": "localhost"
       },
       "id": "lands",
       "class": "",
@@ -47,6 +50,35 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "lands"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -20.07143281089289,
+        52.69143297497835,
+        28.10971392072769,
+        62.007902384434516
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select landuse,way from planet_osm_polygon) as landuses",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-2234341.68,6926124.09,3129159.04,8861016.83",
+        "dbname": "gis",
+        "user": "postgres",
+        "host": "localhost",
+        "id": "landuse",
+        "project": "Bike",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "landuse",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landuse"
     },
     {
       "geometry": "polygon",
@@ -78,6 +110,35 @@
       "name": "building"
     },
     {
+      "geometry": "polygon",
+      "extent": [
+        7.793828769942817,
+        54.12650818696786,
+        15.553064047114887,
+        57.75202940924406
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_polygon where water like '%' or waterway like '%') as lakes",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "867605.05,7194151.93,1731359.17,7915406.06",
+        "dbname": "gis",
+        "user": "postgres",
+        "host": "localhost",
+        "id": "lakes",
+        "project": "Bike",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "lakes",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "lakes"
+    },
+    {
       "geometry": "linestring",
       "extent": [
         -20.07143281089289,
@@ -87,7 +148,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select * from planet_osm_line where waterway like 'river') as rivers",
+        "table": "(select way from planet_osm_line where waterway like 'river' or waterway like 'canal') as rivers",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -511,6 +572,35 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "city"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        5.5836124075906906,
+        54.12650818696786,
+        19.92316201049324,
+        58.920026480557105
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way, amenity from planet_osm_point where amenity like 'campsite') as campsites",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "621564.89,7194151.93,2217836.25,8163121.58",
+        "dbname": "gis",
+        "user": "postgres",
+        "host": "localhost",
+        "id": "campsite",
+        "project": "Bike",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "campsite",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "campsite"
     }
   ],
   "scale": 1,
