@@ -20,7 +20,8 @@
     "style.mss",
     "cities.mss",
     "buildings.mss",
-    "land.mss"
+    "land.mss",
+    "bikes.mss"
   ],
   "Layer": [
     {
