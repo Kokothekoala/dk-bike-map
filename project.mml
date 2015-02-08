@@ -26,21 +26,26 @@
     {
       "geometry": "polygon",
       "extent": [
-        -180,
-        -85.051,
-        180,
-        83.6664731
+        7.793828769942817,
+        54.12650818696786,
+        15.553064047114887,
+        57.75202940924406
       ],
-      "id": "land",
-      "class": "",
       "Datasource": {
-        "file": "/home/tristan/dev/Dev_perso/OSM/land-polygons-split-4326.zip"
+        "type": "postgis",
+        "table": "(select way from planet_osm_polygon where boundary like 'administrative' and admin_level like '4') as lands",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "867605.05,7194151.93,1731359.17,7915406.06",
+        "dbname": "gis"
       },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "lands",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "land"
+      "name": "lands"
     },
     {
       "geometry": "polygon",

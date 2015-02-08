@@ -1,4 +1,4 @@
-#land {
+#lands {
   ::outline {
     line-color: #85c5d3;
     line-width: 2;
@@ -10,4 +10,4 @@
 #river::fill{
   line-width: 2;
   line-color:#85c5d3;
-  }
+}
