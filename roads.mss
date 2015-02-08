@@ -74,6 +74,18 @@
    line-color: #000;
   }
 
+#bike {
+  line-width:3;
+  line-color:#168;
+}
+#bikeroute::border{
+  line-width:5;
+  line-color:#168;
+}
+#bikeroute::fill{
+  line-width:2;
+  line-color:#FFF;
+}
 #motorway{
   text-name:[ref];
   text-face-name:"FreeSans Bold";
@@ -119,6 +131,18 @@
   text-ratio:10;
   text-fill: #FF0;
   text-halo-fill: #000;
+  text-halo-radius:1;
+    text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
+  }
+#bikeroute{
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 10;
+  text-ratio:10;
+  text-fill: #FFF;
+  text-halo-fill: #168;
   text-halo-radius:1;
     text-spacing:750;
   text-min-path-length:30;

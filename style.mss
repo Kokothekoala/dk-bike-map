@@ -13,10 +13,6 @@ Map {
 
 
 
-#bike {
-  line-width:3;
-  line-color:#168;
-}
 
 
 
