@@ -2,7 +2,7 @@ Map {
   background-color: #b8dee6;
 }
 
-#countries {
+#land {
   ::outline {
     line-color: #85c5d3;
     line-width: 2;
@@ -10,9 +10,4 @@ Map {
   }
   polygon-fill: #fff;
 }
-
-
-
-
-
 

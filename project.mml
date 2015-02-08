@@ -48,22 +48,21 @@
     {
       "geometry": "polygon",
       "extent": [
-        -179.9999999999999,
+        -180,
         -85.051,
         180,
-        83.63410065300013
+        83.6664731
       ],
       "id": "land",
       "class": "",
       "Datasource": {
-        "file": "/home/tristan/dev/Dev_perso/OSM/ne_10m_land.zip"
+        "file": "/home/tristan/dev/Dev_perso/OSM/land-polygons-split-4326.zip"
       },
       "layer": null,
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "land",
-      "status": "off"
+      "name": "land"
     },
     {
       "id": "countries",
@@ -92,7 +91,10 @@
         "extent": "867605.05,7194151.93,1731359.17,7915406.06",
         "host": "localhost",
         "user": "postgres",
-        "dbname": "gis"
+        "dbname": "gis",
+        "id": "building",
+        "project": "Bike",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "building",
       "class": "",
