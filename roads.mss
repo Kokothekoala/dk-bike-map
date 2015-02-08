@@ -86,6 +86,15 @@
   line-width:2;
   line-color:#FFF;
 }
+#eurovelo::border{
+  line-width:6;
+  line-color:#168;
+}
+#eurovelo::fill{
+  line-width:2;
+  line-color:#F00;
+}
+
 #motorway{
   text-name:[ref];
   text-face-name:"FreeSans Bold";
@@ -139,9 +148,21 @@
 #bikeroute{
   text-name:[ref];
   text-face-name:"FreeSans Bold";
-  text-size: 10;
+  text-size: 11;
   text-ratio:10;
   text-fill: #FFF;
+  text-halo-fill: #168;
+  text-halo-radius:1;
+    text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
+  }
+#eurovelo{
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 12;
+  text-ratio:10;
+  text-fill: #F00;
   text-halo-fill: #168;
   text-halo-radius:1;
     text-spacing:750;
