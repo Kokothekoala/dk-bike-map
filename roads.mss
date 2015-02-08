@@ -75,7 +75,7 @@
   }
 
 #bike {
-  line-width:3;
+  line-width:2;
   line-color:#168;
 }
 #bikeroute::border{
