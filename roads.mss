@@ -1,27 +1,30 @@
-#motorway::border{
+#motorway::border,
+#trunk::border {
   line-width:5;
   line-color:#000;
 }
-#motorway::fill{
+#motorway::fill,
+#trunk::fill {
   line-width:4;
   line-color:#F00;
 }
-#motorway::fill2{
+#motorway::fill2,
+#trunk::fill2 {
   line-width:1;
   line-color:#FF0;
 }
-
-#trunk::border{
-  line-width:5;
-  line-color:#000;
-}
-#trunk::fill{
-  line-width:4;
-  line-color:#F00;
-}
-#trunk::fill2{
-  line-width:1;
-  line-color:#FFF;
+#motorway,
+#trunk {
+  text-name:[ref];
+  text-face-name:"FreeSans Bold";
+  text-size: 12;
+  text-ratio:10;
+  text-fill: #FF0;
+  text-halo-fill: #000;
+  text-halo-radius:1;
+  text-spacing:750;
+  text-min-path-length:30;
+  text-placement:line;
 }
 
 #primary::border{
