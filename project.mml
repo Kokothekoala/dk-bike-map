@@ -417,6 +417,32 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "table": "(select way, ref from planet_osm_line where route = 'bicycle' and not ref like '%EV%') as bicycle ",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-2234341.68,6926124.09,3129159.04,8861016.83",
+        "host": "localhost",
+        "user": "postgres",
+        "dbname": "gis"
+      },
+      "id": "bikeroute",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bikeroute"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -20.07143281089289,
+        52.69143297497835,
+        28.10971392072769,
+        62.007902384434516
+      ],
+      "Datasource": {
+        "type": "postgis",
         "table": "(select * from planet_osm_line where highway like 'cycleway') as cycleways",
         "key_field": "",
         "geometry_field": "",
@@ -436,32 +462,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "bike"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -20.07143281089289,
-        52.69143297497835,
-        28.10971392072769,
-        62.007902384434516
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select * from planet_osm_line where route = 'bicycle' and not ref like '%EV%') as bicycle ",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-2234341.68,6926124.09,3129159.04,8861016.83",
-        "host": "localhost",
-        "user": "postgres",
-        "dbname": "gis"
-      },
-      "id": "bikeroute",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "bikeroute"
     },
     {
       "geometry": "linestring",
